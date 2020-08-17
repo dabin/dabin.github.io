@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="我的笔记 Js通用函数">
+  <meta name="description" content="我的笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Js通用函数">
 <meta property="og:url" content="https://i-xin.github.io/myblog/61622d0e/index.html">
 <meta property="og:site_name" content="i-xin的博客">
-<meta property="og:description" content="我的笔记 Js通用函数">
+<meta property="og:description" content="我的笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-09-09T07:56:06.000Z">
-<meta property="article:modified_time" content="2020-08-13T06:44:07.693Z">
+<meta property="article:modified_time" content="2020-08-17T04:53:01.796Z">
 <meta property="article:author" content="i-xin">
 <meta property="article:tag" content="springCloud,layui,Vue,javascript,java,Html5,echarts">
 <meta name="twitter:card" content="summary">
@@ -249,7 +249,7 @@ var _hmt = _hmt || [];
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">924字</span>
+      <span class="post-count">923字</span>
     </span>
   </span>
 
@@ -270,8 +270,8 @@ var _hmt = _hmt || [];
   <div class="article-entry" itemprop="articleBody">
     
     <p>我的笔记</p>
-<h1 id="Js通用函数"><a href="#Js通用函数" class="headerlink" title="Js通用函数"></a>Js通用函数</h1><a id="more"></a>
-<h2 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h2><h3 id="判断是否为空"><a href="#判断是否为空" class="headerlink" title="判断是否为空"></a>判断是否为空</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Comm &#x3D; &#123;&#125;</span><br><span class="line">Comm.isEmpty &#x3D; function(value, allowEmptyString) &#123;</span><br><span class="line">    return (value &#x3D;&#x3D;&#x3D; null) || (value &#x3D;&#x3D;&#x3D; undefined) || (!allowEmptyString ? value &#x3D;&#x3D;&#x3D; &#39;&#39; : false) || (Comm.isArray(</span><br><span class="line">        value) &amp;&amp; value.length &#x3D;&#x3D;&#x3D; 0);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Comm.isArray &#x3D; function(value) &#123;</span><br><span class="line">    (&#39;isArray&#39; in Array) ? Array.isArray: function(value) &#123;</span><br><span class="line">        return toString.call(value) &#x3D;&#x3D;&#x3D; &#39;[object Array]&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="Js通用函数"><a href="#Js通用函数" class="headerlink" title="Js通用函数"></a>Js通用函数</h1><h2 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h2><h3 id="判断是否为空"><a href="#判断是否为空" class="headerlink" title="判断是否为空"></a>判断是否为空</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Comm &#x3D; &#123;&#125;</span><br><span class="line">Comm.isEmpty &#x3D; function(value, allowEmptyString) &#123;</span><br><span class="line">    return (value &#x3D;&#x3D;&#x3D; null) || (value &#x3D;&#x3D;&#x3D; undefined) || (!allowEmptyString ? value &#x3D;&#x3D;&#x3D; &#39;&#39; : false) || (Comm.isArray(</span><br><span class="line">        value) &amp;&amp; value.length &#x3D;&#x3D;&#x3D; 0);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Comm.isArray &#x3D; function(value) &#123;</span><br><span class="line">    (&#39;isArray&#39; in Array) ? Array.isArray: function(value) &#123;</span><br><span class="line">        return toString.call(value) &#x3D;&#x3D;&#x3D; &#39;[object Array]&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="URL相关"><a href="#URL相关" class="headerlink" title="URL相关"></a>URL相关</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Url &#x3D;&#123;&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="获取URL所携带的参数"><a href="#获取URL所携带的参数" class="headerlink" title="获取URL所携带的参数"></a>获取URL所携带的参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;获取地址栏参数，name:参数名称</span><br><span class="line">Url.getUrlParms &#x3D; function(name) &#123;</span><br><span class="line">    let tstr &#x3D; window.location.href;</span><br><span class="line">    let index &#x3D; tstr.indexOf(&#39;?&#39;)</span><br><span class="line">    let str &#x3D; tstr.substring(index + 1);</span><br><span class="line">    let arr &#x3D; str.split(&#39;&amp;&#39;);</span><br><span class="line">    let result &#x3D; &#123;&#125;;</span><br><span class="line">    arr.forEach(function(item) &#123;</span><br><span class="line">        let a &#x3D; item.split(&#39;&#x3D;&#39;);</span><br><span class="line">        result[a[0]] &#x3D; a[1];</span><br><span class="line">    &#125;)</span><br><span class="line">    return decodeURI(result[name]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -588,11 +588,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+                <a href="javascript:void(0)" class="js-tag color1">layui</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">layui</a>
+                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,11 +616,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数组</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">数组</a>
               </li>
              
               <li class="article-tag-list-item">

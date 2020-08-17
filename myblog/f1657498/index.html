@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="说明使用layui折叠面板后无法实现折叠效果。官网">
+  <meta name="description" content="说明使用layui折叠面板后无法实现折叠效果。官网 第一检查js是否加载element模块,折叠面板依赖element模块。参考官网例子。 1234567891011121314151617181920212223&lt;div class&#x3D;&quot;layui-collapse&quot;&gt;  &lt;div class&#x3D;&quot;layui-colla-item">
 <meta property="og:type" content="article">
 <meta property="og:title" content="layui折叠面板无效">
 <meta property="og:url" content="https://i-xin.github.io/myblog/f1657498/index.html">
 <meta property="og:site_name" content="i-xin的博客">
-<meta property="og:description" content="说明使用layui折叠面板后无法实现折叠效果。官网">
+<meta property="og:description" content="说明使用layui折叠面板后无法实现折叠效果。官网 第一检查js是否加载element模块,折叠面板依赖element模块。参考官网例子。 1234567891011121314151617181920212223&lt;div class&#x3D;&quot;layui-collapse&quot;&gt;  &lt;div class&#x3D;&quot;layui-colla-item">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-12T05:14:59.000Z">
-<meta property="article:modified_time" content="2020-08-13T06:44:07.687Z">
+<meta property="article:modified_time" content="2020-08-17T04:52:13.011Z">
 <meta property="article:author" content="i-xin">
 <meta property="article:tag" content="springCloud,layui,Vue,javascript,java,Html5,echarts">
 <meta name="twitter:card" content="summary">
@@ -269,8 +269,8 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>使用layui折叠面板后无法实现折叠效果。<br><a href="https://www.layui.com/doc/element/panel.html">官网</a></p>
-<a id="more"></a>
+    <a id="more"></a>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>使用layui折叠面板后无法实现折叠效果。<br><a href="https://www.layui.com/doc/element/panel.html">官网</a></p>
 <h3 id="第一"><a href="#第一" class="headerlink" title="第一"></a>第一</h3><p>检查js是否加载element模块,折叠面板依赖element模块。参考官网例子。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;layui-collapse&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;layui-colla-item&quot;&gt;</span><br><span class="line">    &lt;h2 class&#x3D;&quot;layui-colla-title&quot;&gt;杜甫&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;layui-colla-content layui-show&quot;&gt;内容区域&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;layui-colla-item&quot;&gt;</span><br><span class="line">    &lt;h2 class&#x3D;&quot;layui-colla-title&quot;&gt;李清照&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;layui-colla-content layui-show&quot;&gt;内容区域&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;layui-colla-item&quot;&gt;</span><br><span class="line">    &lt;h2 class&#x3D;&quot;layui-colla-title&quot;&gt;鲁迅&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;layui-colla-content layui-show&quot;&gt;内容区域&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"> </span><br><span class="line">&lt;script&gt;</span><br><span class="line">&#x2F;&#x2F;注意：折叠面板 依赖 element 模块，否则无法进行功能性操作</span><br><span class="line">layui.use(&#39;element&#39;, function()&#123;</span><br><span class="line">  var element &#x3D; layui.element;</span><br><span class="line">  </span><br><span class="line">  &#x2F;&#x2F;…</span><br><span class="line">&#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="第二"><a href="#第二" class="headerlink" title="第二"></a>第二</h3><p>在引用element模块后仍然无效，则增加以下代码</p>
@@ -564,11 +564,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+                <a href="javascript:void(0)" class="js-tag color1">layui</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">layui</a>
+                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,11 +592,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数组</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">数组</a>
               </li>
              
               <li class="article-tag-list-item">
