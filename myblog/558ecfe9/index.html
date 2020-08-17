@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="问题描述对比两个数组中元素的变化，返回变化元素的下标 代码1234567891011121314151617181920212223&#x2F;** * 判断两个数组 * 发生改变的元素下标 * @return 下标数组 * @param &amp;#123;&amp;#125; q 新数组 * @param &amp;#123;&amp;#125; c 原数组  *&#x2F;Arr &#x3D; &amp;#123;&amp;#125;A">
+  <meta name="description" content="问题描述对比两个数组中元素的变化，返回变化元素的下标">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js对比数组元素变化">
 <meta property="og:url" content="https://i-xin.github.io/myblog/558ecfe9/index.html">
 <meta property="og:site_name" content="i-xin的博客">
-<meta property="og:description" content="问题描述对比两个数组中元素的变化，返回变化元素的下标 代码1234567891011121314151617181920212223&#x2F;** * 判断两个数组 * 发生改变的元素下标 * @return 下标数组 * @param &amp;#123;&amp;#125; q 新数组 * @param &amp;#123;&amp;#125; c 原数组  *&#x2F;Arr &#x3D; &amp;#123;&amp;#125;A">
+<meta property="og:description" content="问题描述对比两个数组中元素的变化，返回变化元素的下标">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-09-25T01:19:16.000Z">
-<meta property="article:modified_time" content="2020-08-17T04:51:34.612Z">
+<meta property="article:modified_time" content="2020-08-17T05:26:29.754Z">
 <meta property="article:author" content="i-xin">
 <meta property="article:tag" content="数组">
 <meta name="twitter:card" content="summary">
@@ -269,8 +269,8 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>对比两个数组中元素的变化，返回变化元素的下标</p>
+    <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>对比两个数组中元素的变化，返回变化元素的下标</p>
+<a id="more"></a>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 判断两个数组</span><br><span class="line"> * 发生改变的元素下标</span><br><span class="line"> * @return 下标数组</span><br><span class="line"> * @param &#123;&#125; q 新数组</span><br><span class="line"> * @param &#123;&#125; c 原数组 </span><br><span class="line"> *&#x2F;</span><br><span class="line">Arr &#x3D; &#123;&#125;</span><br><span class="line">Arr.judgeDifferent &#x3D; function(q,c)&#123;</span><br><span class="line"> var p&#x3D;[];</span><br><span class="line"> var maxlen &#x3D; Math.max(q.length,c.length);</span><br><span class="line"> var minlen &#x3D; Math.min(q.length,c.length);</span><br><span class="line"> for(var i&#x3D;0; i&lt;maxlen;i++)&#123;</span><br><span class="line">     if(minlen &lt; i)&#123;</span><br><span class="line">         p.push(i);</span><br><span class="line">     &#125;else&#123;</span><br><span class="line">         if(q[i]!&#x3D;c[i])&#123;</span><br><span class="line">             p.push(i);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;              </span><br><span class="line"> &#125;</span><br><span class="line"> return p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     
 

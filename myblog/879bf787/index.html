@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="需求1、公司内网服务器装有web服务，通过nginx801端口访问。该服务器可访问公网。无固定IP2、有vps（云服务）一个，公网IP:139.11.11.113、想在家访问VPS的8880端口访问到内网web服务 下载&amp;介绍 下载地址 帮助手册 内网穿透由三部分组成:client端，server端，bridge端；client和server主动连接bridge端进行桥接。   配置se">
+  <meta name="description" content="需求1、公司内网服务器装有web服务，通过nginx801端口访问。该服务器可访问公网。无固定IP2、有vps（云服务）一个，公网IP:139.11.11.113、想在家访问VPS的8880端口访问到内网web服务">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Goproxy配置">
 <meta property="og:url" content="https://i-xin.github.io/myblog/879bf787/index.html">
 <meta property="og:site_name" content="i-xin的博客">
-<meta property="og:description" content="需求1、公司内网服务器装有web服务，通过nginx801端口访问。该服务器可访问公网。无固定IP2、有vps（云服务）一个，公网IP:139.11.11.113、想在家访问VPS的8880端口访问到内网web服务 下载&amp;介绍 下载地址 帮助手册 内网穿透由三部分组成:client端，server端，bridge端；client和server主动连接bridge端进行桥接。   配置se">
+<meta property="og:description" content="需求1、公司内网服务器装有web服务，通过nginx801端口访问。该服务器可访问公网。无固定IP2、有vps（云服务）一个，公网IP:139.11.11.113、想在家访问VPS的8880端口访问到内网web服务">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i-xin.github.io/myblog/879bf787/1.png">
 <meta property="og:image" content="https://i-xin.github.io/myblog/879bf787/2.png">
 <meta property="article:published_time" content="2019-09-09T01:38:51.000Z">
-<meta property="article:modified_time" content="2020-08-17T04:51:15.131Z">
+<meta property="article:modified_time" content="2020-08-17T05:26:11.114Z">
 <meta property="article:author" content="i-xin">
 <meta property="article:tag" content="GoProxy">
 <meta name="twitter:card" content="summary">
@@ -272,8 +272,8 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>1、公司内网服务器装有web服务，通过nginx801端口访问。该服务器可访问公网。无固定IP<br>2、有vps（云服务）一个，公网IP:139.11.11.11<br>3、想在家访问VPS的8880端口访问到内网web服务</p>
+    <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>1、公司内网服务器装有web服务，通过nginx801端口访问。该服务器可访问公网。无固定IP<br>2、有vps（云服务）一个，公网IP:139.11.11.11<br>3、想在家访问VPS的8880端口访问到内网web服务</p>
+<a id="more"></a>
 <h3 id="下载-amp-介绍"><a href="#下载-amp-介绍" class="headerlink" title="下载&amp;介绍"></a>下载&amp;介绍</h3><p> <a href="https://github.com/snail007/goproxy/releases">下载地址</a><br> <a href="https://snail007.github.io/goproxy/manual/zh/#/">帮助手册</a><br> 内网穿透由三部分组成:client端，server端，bridge端；client和server主动连接bridge端进行桥接。<br> <img src="1.png" alt="如图"><br> <img src="2.png" alt="解压目录"></p>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h3 id="server-amp-bridge"><a href="#server-amp-bridge" class="headerlink" title="server&amp;bridge"></a>server&amp;bridge</h3><p>现在将server与bridge安装至vps.</p>
 <p>执行以下命令：//创建端口为30047的bridge服务</p>

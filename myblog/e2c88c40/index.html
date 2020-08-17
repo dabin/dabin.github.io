@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="自定义通用保存数据方法根据layui.data创建 代码： 1234567891011LocalData&#x3D;&amp;#123;&amp;#125;;LocalData.setData &#x3D; function(key, value)&amp;#123;    layui.data(&#39;LocalData&#39;,&amp;#123;        key :key,        value: valu">
+  <meta name="description" content="自定义通用保存数据方法根据layui.data创建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用layui.data保存数据">
 <meta property="og:url" content="https://i-xin.github.io/myblog/e2c88c40/index.html">
 <meta property="og:site_name" content="i-xin的博客">
-<meta property="og:description" content="自定义通用保存数据方法根据layui.data创建 代码： 1234567891011LocalData&#x3D;&amp;#123;&amp;#125;;LocalData.setData &#x3D; function(key, value)&amp;#123;    layui.data(&#39;LocalData&#39;,&amp;#123;        key :key,        value: valu">
+<meta property="og:description" content="自定义通用保存数据方法根据layui.data创建">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-10-10T06:36:05.000Z">
-<meta property="article:modified_time" content="2020-08-17T04:53:41.194Z">
+<meta property="article:modified_time" content="2020-08-17T05:29:02.273Z">
 <meta property="article:author" content="i-xin">
 <meta property="article:tag" content="layui">
 <meta name="twitter:card" content="summary">
@@ -269,8 +269,8 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<h3 id="自定义通用保存数据方法"><a href="#自定义通用保存数据方法" class="headerlink" title="自定义通用保存数据方法"></a>自定义通用保存数据方法</h3><p>根据layui.data创建</p>
+    <h3 id="自定义通用保存数据方法"><a href="#自定义通用保存数据方法" class="headerlink" title="自定义通用保存数据方法"></a>自定义通用保存数据方法</h3><p>根据layui.data创建</p>
+<a id="more"></a>
 <p>代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">LocalData&#x3D;&#123;&#125;;</span><br><span class="line">LocalData.setData &#x3D; function(key, value)&#123;</span><br><span class="line">    layui.data(&#39;LocalData&#39;,&#123;</span><br><span class="line">        key :key,</span><br><span class="line">        value: value</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">LocalData.getData &#x3D; function(key)&#123;</span><br><span class="line">    var localData &#x3D; layui.data(&#39;LocalData&#39;);</span><br><span class="line">    return localData[key];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> </p>
